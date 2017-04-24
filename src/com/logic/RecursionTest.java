@@ -3,9 +3,9 @@ package com.logic;
 public class RecursionTest {
 
 	/*
-	 * ÓÃµİ¹é±àĞ´³ÌĞòÊ±Ò»¶¨ÒªÀÎ¼ÇÁ½µã£º
-	 * 1. µİ¹é¹«Ê½£»
-	 * 2. ÊÕÁ²Ìõ¼ş£¨Ê²Ã´Ê±ºò¾Í²»ÔÙ¼ÌĞøµİ¹é£©¡£
+	 * ç”¨é€’å½’ç¼–å†™ç¨‹åºæ—¶ä¸€å®šè¦ç‰¢è®°ä¸¤ç‚¹ï¼š
+	 * 1. é€’å½’å…¬å¼ï¼›
+	 * 2. æ”¶æ•›æ¡ä»¶ï¼ˆä»€ä¹ˆæ—¶å€™å°±ä¸å†ç»§ç»­é€’å½’ï¼‰ã€‚
 	 * recursive function calling
 	 */
 	public static String reverse(String originStr) {
