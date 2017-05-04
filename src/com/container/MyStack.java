@@ -1,11 +1,11 @@
 package com.container;
 
-public class Stack<E> {
+public class MyStack<E> {
 	private Object[] data = null;
 	private int capacity; // capacity： 栈的容量
 	private int top; // top： 栈顶指针
 
-	Stack() {
+	MyStack() {
 		this(10);
 	}
 
@@ -15,7 +15,7 @@ public class Stack<E> {
 	 * @param initialSize
 	 *            栈的初始化大小
 	 */
-	Stack(int initialSize) {
+	MyStack(int initialSize) {
 		if (initialSize >= 0) {
 			this.capacity = initialSize;
 			data = new Object[initialSize];
