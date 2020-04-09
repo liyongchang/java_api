@@ -2,6 +2,7 @@ package com.thread.eg.bank;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadPoolExecutor;
 
 public class TestAddMoneyThread {
 	public static void main(String[] args) {
@@ -17,8 +18,7 @@ public class TestAddMoneyThread {
 		while (!service.isTerminated()) {
 		}
 
-		System.out.println("’Àªß”‡∂Ó: " + account.getBalance());
+		System.out.println("Ë¥¶Êà∑‰ΩôÈ¢ù: " + account.getBalance());
 
 	}
-
 }
