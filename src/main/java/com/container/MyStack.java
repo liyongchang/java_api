@@ -2,18 +2,18 @@ package com.container;
 
 public class MyStack<E> {
 	private Object[] data = null;
-	private int capacity; // capacity£º Õ»µÄÈİÁ¿
-	private int top; // top£º Õ»¶¥Ö¸Õë
+	private int capacity; // capacityï¼š æ ˆçš„å®¹é‡
+	private int top; // topï¼š æ ˆé¡¶æŒ‡é’ˆ
 
 	MyStack() {
 		this(10);
 	}
 
 	/**
-	 * ³õÊ¼»¯Õ»£¬ÉùÃ÷±£´æÊı¾İµÄÊı×é´óĞ¡¡£
+	 * åˆå§‹åŒ–æ ˆï¼Œå£°æ˜ä¿å­˜æ•°æ®çš„æ•°ç»„å¤§å°ã€‚
 	 * 
 	 * @param initialSize
-	 *            Õ»µÄ³õÊ¼»¯´óĞ¡
+	 *            æ ˆçš„åˆå§‹åŒ–å¤§å°
 	 */
 	MyStack(int initialSize) {
 		if (initialSize >= 0) {
@@ -21,12 +21,12 @@ public class MyStack<E> {
 			data = new Object[initialSize];
 			top = 0;
 		} else {
-			throw new RuntimeException("³õÊ¼»¯´óĞ¡²»ÄÜĞ¡ÓÚ0£º" + initialSize);
+			throw new RuntimeException("åˆå§‹åŒ–å¤§å°ä¸èƒ½å°äº0ï¼š" + initialSize);
 		}
 	}
 
 	/**
-	 * ÅĞ¶ÏÕ»ÊÇ·ñÎª¿Õ
+	 * åˆ¤æ–­æ ˆæ˜¯å¦ä¸ºç©º
 	 * 
 	 * @return
 	 */
@@ -35,7 +35,7 @@ public class MyStack<E> {
 	}
 
 	/**
-	 * »ñÈ¡Õ»¶¥ÔªËØµÄÄÚÈİ£¬µ«ÊÇ²»µ¯³ö
+	 * è·å–æ ˆé¡¶å…ƒç´ çš„å†…å®¹ï¼Œä½†æ˜¯ä¸å¼¹å‡º
 	 * 
 	 * @return
 	 */
@@ -44,7 +44,7 @@ public class MyStack<E> {
 	}
 
 	/**
-	 * µ¯³öÕ»¶¥ÔªËØ
+	 * å¼¹å‡ºæ ˆé¡¶å…ƒç´ 
 	 * 
 	 * @return
 	 */
@@ -55,10 +55,10 @@ public class MyStack<E> {
 	}
 
 	/**
-	 * ÔÚÕ»¶¥²åÈëÔªËØ
+	 * åœ¨æ ˆé¡¶æ’å…¥å…ƒç´ 
 	 * 
 	 * @param e
-	 *            ´ı²åÈëµÄÔªËØ
+	 *            å¾…æ’å…¥çš„å…ƒç´ 
 	 * @return
 	 */
 	boolean push(E e) {
@@ -69,7 +69,7 @@ public class MyStack<E> {
 	}
 
 	/**
-	 * ¼ì²é´æ´¢Êı¾İµÄÊı×éÈİÁ¿£¬Èç¹ûÊı×éÒÑ¾­Âú£¬ÔòÀ©³äÈİÁ¿£»·ñÔò²»²Ù×÷¡£
+	 * æ£€æŸ¥å­˜å‚¨æ•°æ®çš„æ•°ç»„å®¹é‡ï¼Œå¦‚æœæ•°ç»„å·²ç»æ»¡ï¼Œåˆ™æ‰©å……å®¹é‡ï¼›å¦åˆ™ä¸æ“ä½œã€‚
 	 */
 	private void ensureCapacity() {
 		int index;
