@@ -9,7 +9,7 @@ import java.util.Map;
  */
 public class LRUCache {
     private int capacity;
-    private Map<Integer, Integer> map = new LinkedHashMap<>(capacity);
+    private Map<Integer, Integer> map = new LinkedHashMap(capacity);
 
     public LRUCache(int capacity) {
         this.capacity = capacity;
