@@ -16,10 +16,10 @@ public class HappyNumber {
 		while (inLoop.add(n)) {
 			squareSum = 0;
 			while (n > 0) {
-				//ÓàÊı
+				//ä½™æ•°
 				remain = n % 10;
 				squareSum += remain * remain;
-				//È¡ÕûÊı
+				//å–æ•´æ•°
 				n /= 10;
 			}
 			if (squareSum == 1)

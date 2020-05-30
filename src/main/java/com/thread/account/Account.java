@@ -1,4 +1,4 @@
-package com.thread.eg.bank;
+package com.thread.account;
 
 public class Account {
 	private double balance; // ??????

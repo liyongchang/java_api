@@ -7,15 +7,15 @@ import java.util.Stack;
 public class TestQueueAndStack {
 
 	/**
-	 * ²âÊÔ¶ÓÁĞ
+	 * æµ‹è¯•é˜Ÿåˆ—
 	 * 
 	 * <pre>
-	 * ¶ÓÁĞÌØµã£¬ÏÈ½øÏÈ³ö£¬ºó½øºó³ö£¬»ğ³µ¹ıÉ½¶´Àı×Ó
+	 * é˜Ÿåˆ—ç‰¹ç‚¹ï¼Œå…ˆè¿›å…ˆå‡ºï¼Œåè¿›åå‡ºï¼Œç«è½¦è¿‡å±±æ´ä¾‹å­
 	 * </pre>
 	 */
 	static void testQueue() {
 		Queue<String> queue = new LinkedList<String>();
-		// Ìí¼Ó¼¸¸öÔªËØ
+		// æ·»åŠ å‡ ä¸ªå…ƒç´ 
 		queue.offer("a");
 		queue.offer("b");
 		queue.offer("c");
@@ -26,26 +26,26 @@ public class TestQueueAndStack {
 		queue.add("3");
 		queue.add("4");
 		queue.add("5");
-		System.out.println("¶ÓÁĞÖĞµÄÔªËØÊÇ:" + queue);
-		// µ¯³öÔªËØ
+		System.out.println("é˜Ÿåˆ—ä¸­çš„å…ƒç´ æ˜¯:" + queue);
+		// å¼¹å‡ºå…ƒç´ 
 		queue.poll();
-		System.out.println("¶ÓÁĞÖĞµÄÔªËØÊÇ:" + queue);
-		// ²é¿´¶ÓÁĞÖĞÊ×¸öÔªËØ£¬²¢²»ÒÆ³ı
+		System.out.println("é˜Ÿåˆ—ä¸­çš„å…ƒç´ æ˜¯:" + queue);
+		// æŸ¥çœ‹é˜Ÿåˆ—ä¸­é¦–ä¸ªå…ƒç´ ï¼Œå¹¶ä¸ç§»é™¤
 		String peek = queue.peek();
-		System.out.println("²é¿´¶ÓÁĞÖĞÊ×¸öÔªËØ£¬²¢²»ÒÆ³ı:" + peek);
-		System.out.println("¶ÓÁĞÖĞµÄÔªËØÊÇ:" + queue);
+		System.out.println("æŸ¥çœ‹é˜Ÿåˆ—ä¸­é¦–ä¸ªå…ƒç´ ï¼Œå¹¶ä¸ç§»é™¤:" + peek);
+		System.out.println("é˜Ÿåˆ—ä¸­çš„å…ƒç´ æ˜¯:" + queue);
 	}
 
 	/**
-	 * ²âÊÔÕ»
+	 * æµ‹è¯•æ ˆ
 	 * 
 	 * <pre>
-	 * ÏÈ½øºó³ö£¬ºó½øÏÈ³ö£¬Ë®Í°µ¹Ë®
+	 * å…ˆè¿›åå‡ºï¼Œåè¿›å…ˆå‡ºï¼Œæ°´æ¡¶å€’æ°´
 	 * </pre>
 	 */
 	static void testStack() {
 		Stack<String> stack = new Stack<String>();
-		// Ìí¼Ó¼¸¸öÔªËØ
+		// æ·»åŠ å‡ ä¸ªå…ƒç´ 
 		stack.push("a");
 		stack.push("b");
 		stack.push("c");
@@ -56,14 +56,14 @@ public class TestQueueAndStack {
 		stack.add("3");
 		stack.add("4");
 		stack.add("5");
-		System.out.println("Õ»ÖĞµÄÔªËØÊÇ:" + stack);
-		// µ¯³öÔªËØ
+		System.out.println("æ ˆä¸­çš„å…ƒç´ æ˜¯:" + stack);
+		// å¼¹å‡ºå…ƒç´ 
 		stack.pop();
-		System.out.println("Õ»ÖĞµÄÔªËØÊÇ:" + stack);
-		// ²é¿´Õ»ÖĞÊ×¸öÔªËØ£¬²¢²»ÒÆ³ı
+		System.out.println("æ ˆä¸­çš„å…ƒç´ æ˜¯:" + stack);
+		// æŸ¥çœ‹æ ˆä¸­é¦–ä¸ªå…ƒç´ ï¼Œå¹¶ä¸ç§»é™¤
 		String peek = stack.peek();
-		System.out.println("²é¿´Õ»ÖĞÊ×¸öÔªËØ£¬²¢²»ÒÆ³ı:" + peek);
-		System.out.println("Õ»ÖĞµÄÔªËØÊÇ:" + stack);
+		System.out.println("æŸ¥çœ‹æ ˆä¸­é¦–ä¸ªå…ƒç´ ï¼Œå¹¶ä¸ç§»é™¤:" + peek);
+		System.out.println("æ ˆä¸­çš„å…ƒç´ æ˜¯:" + stack);
 	}
 
 	/**
@@ -71,7 +71,7 @@ public class TestQueueAndStack {
 	 */
 	public static void main(String[] args) {
 		testQueue();
-		System.out.println("-------Õ»--------");
+		System.out.println("-------æ ˆ--------");
 		testStack();
 	}
 

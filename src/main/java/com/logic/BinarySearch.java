@@ -7,7 +7,7 @@ public class BinarySearch {
 		int[] arr = { 1, 9, 3, 5, 8 };
 		Arrays.sort(arr);
 		int index=Arrays.binarySearch(arr, 3);
-		System.out.println("Êı×éÅÅĞòºó3µÄË÷ÒıÊÇ"+index);
+		System.out.println("æ•°ç»„æ’åºå3çš„ç´¢å¼•æ˜¯"+index);
 
 	}
 }
