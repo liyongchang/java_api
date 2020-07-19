@@ -3,7 +3,7 @@ package com.container.list;
 import java.util.Iterator;
 import java.util.LinkedList;
 
-public class LinkListTest {
+public class MyLinkListTest {
     public static void main(String[] args) {
         LinkedList<String> linkedList=new LinkedList();
         linkedList.add("1");

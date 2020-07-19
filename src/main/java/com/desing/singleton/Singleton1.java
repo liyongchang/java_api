@@ -1,8 +1,9 @@
-package com.desing;
+package com.desing.singleton;
 
 /**
  * 保证一个类只有一个示例，并且提供一个可以全局访问的入口。
  * 节省内存 节省计算
+ * double check lock
  */
 public class Singleton1 {
     //volatile 非原子 禁止指令充排序
@@ -17,7 +18,7 @@ public class Singleton1 {
     }
 
     public static Singleton1 getInstance() {
-        //第一层判断 线程串行执行
+        //第一层判断 线程串行执行  提高销量不必竞争锁
         if (singleton == null) {
             synchronized (Singleton1.class) {
                 //第二层判断 第一个执行完new Singleton1后退出保护区域，第二个也会创建示例。

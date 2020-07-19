@@ -1,4 +1,4 @@
-package com.desing;
+package com.desing.singleton;
 
 public class TestSingleton {
     public static void main(String[] args) {

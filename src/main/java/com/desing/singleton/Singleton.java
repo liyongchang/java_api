@@ -1,4 +1,4 @@
-package com.desing;
+package com.desing.singleton;
 
 /**
  * 保证一个类只有一个示例，并且提供一个可以全局访问的入口。
