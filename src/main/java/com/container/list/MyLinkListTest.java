@@ -22,4 +22,5 @@ public class MyLinkListTest {
             System.out.println(iterator);
         }*/
     }
+
 }
