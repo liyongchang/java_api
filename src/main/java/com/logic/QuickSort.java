@@ -9,9 +9,9 @@ public class QuickSort {
 		items.add(1);
 		items.add(122);
 		items.add(14);
-		/*items.add(61);
+		items.add(61);
 		items.add(99);
-		items.add(36);*/
+		items.add(36);
 		System.out.println(items);
 		System.out.println(items.size());
 		sort(items);
