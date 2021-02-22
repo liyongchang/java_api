@@ -59,7 +59,7 @@ public class ReverseListNode {
         listNode.next = listNode1;
         listNode1.next = listNode2;
         Solution solution = new Solution();
-        int[] res = solution.reversePrint(listNode);
+        int[] res = solution.reversePrint2(listNode);
         for (int re : res) {
             System.out.println(re);
         }

@@ -1,6 +1,9 @@
 package com.container.tree;
 
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class BinaryTree {
     private BinaryTreeNode root;
 
@@ -116,6 +119,22 @@ public class BinaryTree {
 
     public void visit(BinaryTreeNode node) {
         System.out.printf(node.getData() + "");
+    }
+
+    public void levelOrder(BinaryTreeNode node) {
+        Queue<BinaryTreeNode> binaryTreeNodes = new LinkedList<>();
+        binaryTreeNodes.add(node);
+        while (!binaryTreeNodes.isEmpty()) {
+            BinaryTreeNode binaryTreeNode = binaryTreeNodes.poll();
+            visit(binaryTreeNode);
+            if (null != binaryTreeNode.getLeftChild()) {
+                binaryTreeNodes.add(binaryTreeNode.getLeftChild());
+            }
+            if (null != binaryTreeNode.getRightChild()) {
+                binaryTreeNodes.add(binaryTreeNode.getRightChild());
+            }
+        }
+
     }
 
 

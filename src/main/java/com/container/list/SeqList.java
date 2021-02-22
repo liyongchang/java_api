@@ -22,7 +22,7 @@ public class SeqList<T> {
     }
 
     public static void main(String[] args) {
-        SeqList seqList = creat(4);
+        /*SeqList seqList = creat(4);
         printSeq(seqList);
         //seqList.addFirst(seqList, 1000);
         //addLast(seqList, 4000);
@@ -31,6 +31,35 @@ public class SeqList<T> {
         printSeq(seqList1);
 
 
+        CopyOnWriteArrayList copyOnWriteArrayList=new CopyOnWriteArrayList();*/
+        ListNode node=new ListNode();
+        node.val=1;
+        ListNode node1=new ListNode();
+        node1.val=2;
+        node.next=node1;
+
+
+        reverseList(node);
+
+
+
+
+    }
+
+    public static ListNode reverseList(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+        ListNode cur = head;
+        ListNode pre = null;
+        ListNode nextP = null;
+        while (cur != null) {
+            nextP = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = nextP;
+        }
+        return pre;
     }
 
     private static SeqList reverse(SeqList head) {

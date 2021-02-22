@@ -10,6 +10,7 @@ public class Singleton1 {
     // 1.给 Singleton1 分配内存空间
     // 2.调用Singleton1构造函数初始化singleton
     // 3.将Singleton1对象指向分配的内存空间
+    // 2 3 不存在数据依赖关系存在重排优化
     // 123 132顺序
     private volatile static Singleton1 singleton;
 
