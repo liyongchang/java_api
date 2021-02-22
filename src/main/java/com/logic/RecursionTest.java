@@ -11,11 +11,6 @@ public class RecursionTest {
 	public static String reverse(String originStr) {
 		if (originStr == null || originStr.length() <= 1)
 			return originStr;
-		System.out.println(originStr);
-		System.out.println(originStr.substring(1));
-		System.out.println(originStr.charAt(0));
-		System.out.println(reverse(originStr.substring(1)) + originStr.charAt(0));
-		System.out.println("............");
 		return reverse(originStr.substring(1)) + originStr.charAt(0);
 	}
 

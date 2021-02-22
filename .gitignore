@@ -1,3 +1,5 @@
 /java_api.iml
+/.class
 /.idea/
 /.idea/
+/target/classes/com/proxy/AddOrderImpl.class

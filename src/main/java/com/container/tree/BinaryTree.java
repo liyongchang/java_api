@@ -121,6 +121,13 @@ public class BinaryTree {
         System.out.printf(node.getData() + "");
     }
 
+    /**
+     * 层序遍历
+     * 1.用队列存储元素
+     * 2.add 入队，pool 出队
+     * 3.收敛条件队列有值
+     * @param node
+     */
     public void levelOrder(BinaryTreeNode node) {
         Queue<BinaryTreeNode> binaryTreeNodes = new LinkedList<>();
         binaryTreeNodes.add(node);
