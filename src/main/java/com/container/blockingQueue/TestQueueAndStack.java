@@ -1,4 +1,4 @@
-package com.container;
+package com.container.blockingQueue;
 
 import java.util.LinkedList;
 import java.util.Queue;
