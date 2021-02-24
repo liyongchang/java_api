@@ -1,6 +1,6 @@
 package com.container.hashTable;
 
-import java.util.HashSet;
+import java.util.HashMap;
 
 public class TestHashSet {
 
@@ -13,12 +13,15 @@ public class TestHashSet {
         n |= n >>> 4;
         n |= n >>> 8;
         n |= n >>> 16;
-        return (n < 0) ? 1 : (n >= MAXIMUM_CAPACITY) ? MAXIMUM_CAPACITY : n + 1;}
+        return (n < 0) ? 1 : (n >= MAXIMUM_CAPACITY) ? MAXIMUM_CAPACITY : n + 1;
+    }
 
 
-        public static void main(String[] args) {
+    public static void main(String[] args) {
+        HashMap map=new HashMap();
+        map.put("123","");
 
-            System.out.println(tableSizeFor(8));
+        System.out.println(tableSizeFor(8));
 
       /*  int hash = hash("ssss");
         System.out.println(hash);
@@ -41,12 +44,14 @@ public class TestHashSet {
 
         List l = new ArrayList();*/
 
-        HashSet set = new HashSet();
+       // hash("hello");
+
+       /* HashSet set = new HashSet();
         Student student1 = new Student("1", "jack");
         Student student2 = new Student("1", "jack");
         set.add(student1);
         set.add(student2);
-        System.out.println(set.size());
+        System.out.println(set.size());*/
 
 
         /*System.out.println(student1.hashCode());
@@ -59,10 +64,17 @@ public class TestHashSet {
     }
 
     public static int hash(Object key) {
+
         int h;
         System.out.println(key.hashCode());
+        System.out.println(Integer.toBinaryString(key.hashCode()));
+
         System.out.println(key.hashCode() >>> 16);
+        System.out.println(Integer.toBinaryString(key.hashCode() >>> 16));
+
         System.out.println((h = key.hashCode()) ^ (h >>> 16));
+        System.out.println(Integer.toBinaryString((h = key.hashCode()) ^ (h >>> 16)));
+
         return (key == null) ? 0 : (h = key.hashCode()) ^ (h >>> 16);
     }
 }
