@@ -1,14 +1,12 @@
 package com.logic;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class QuickSort {
     public static void main(String[] args) {
-
-        System.out.println(122);
-
-
+        /*System.out.println(122);
         List<Integer> items = new ArrayList<Integer>();
         items.add(1);
         items.add(122);
@@ -18,33 +16,39 @@ public class QuickSort {
         items.add(36);
         System.out.println(items);
         System.out.println(items.size());
-        sort(items);
+        sort(items);*/
+        System.out.println("quick_sort--------------");
+        int[] s = new int[]{1, 3, 0, 7, 5};
+        new QuickSort().quick_sort(s, 0, s.length - 1);
+        System.out.println(Arrays.toString(s));
     }
+
 
     public void quick_sort(int s[], int left, int right) {
         if (left < right) {
             int leftPoint = left;
             int rightPoint = right;
-            int x = s[left];
+            int pivot = s[left];
             while (leftPoint < rightPoint) {
-                while (leftPoint < rightPoint && s[rightPoint] >= x) {
+                while (leftPoint < rightPoint && s[rightPoint] > pivot) {
                     rightPoint--;
                 }
-                if (leftPoint < rightPoint) {
-                    s[leftPoint] = s[rightPoint];
+
+                while (leftPoint < rightPoint && s[leftPoint] <= pivot) {
                     leftPoint++;
                 }
-                while (leftPoint < rightPoint && s[rightPoint] <= x) {
-                    leftPoint++;
-                }
+                //两个条件都满足才交换
                 if (leftPoint < rightPoint) {
+                    int temp = s[leftPoint];
                     s[leftPoint] = s[rightPoint];
-                    rightPoint--;
+                    s[rightPoint] = temp;
                 }
             }
-            s[leftPoint] = x;
-            quick_sort(s, left, leftPoint - 1);
-            quick_sort(s, leftPoint + 1, rightPoint);
+            //快速排序为何这么快，因为一趟排序后元素都在他应该在的位置！
+            s[left] = s[leftPoint];
+            s[leftPoint] = pivot;
+            quick_sort(s, left, rightPoint - 1);
+            quick_sort(s, rightPoint + 1, right);
         }
     }
 

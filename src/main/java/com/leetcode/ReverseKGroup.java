@@ -31,10 +31,11 @@ public class ReverseKGroup {
             tail = tail.next;
         }
         ListNode newHead = reverse(head, tail);
-        head.next = reverseKGroup(tail, 3);
+        //这里本省头部节点反转后就要指向反转后的节点
+        head.next = reverseKGroup(tail, k);
         return newHead;
     }
-
+    //少量反转链表方法
     private ListNode reverse(ListNode head, ListNode tail) {
         ListNode cur = head;
         ListNode nextP = null;
@@ -47,7 +48,6 @@ public class ReverseKGroup {
             cur = nextP;//当前节点后移动
         }
         return preP;
-
     }
 
 
