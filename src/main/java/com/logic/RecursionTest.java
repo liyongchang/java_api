@@ -21,8 +21,6 @@ public class RecursionTest {
 
         String s = reverse2("123456");
         System.out.println(s);
-
-        System.out.println(reverse3(s));
     }
 
 
@@ -34,13 +32,4 @@ public class RecursionTest {
         }
         return s;
     }
-
-    public static String reverse3(String a) {
-        if (a == null || a.length() == 0) {
-            return a;
-        }
-        return reverse3(a.substring(0)) + a.charAt(0);
-    }
-
-
 }

@@ -1,4 +1,4 @@
-package com.leetcode;
+package com.leetcode.reverse;
 
 public class ReverseWords {
     public static String reverseWords(String s) {

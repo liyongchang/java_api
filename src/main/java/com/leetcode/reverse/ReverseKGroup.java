@@ -1,4 +1,4 @@
-package com.leetcode;
+package com.leetcode.reverse;
 
 public class ReverseKGroup {
 
@@ -31,7 +31,7 @@ public class ReverseKGroup {
             tail = tail.next;
         }
         ListNode newHead = reverse(head, tail);
-        //这里本省头部节点反转后就要指向反转后的节点
+        //这里本身头部节点反转后就要指向反转后的节点
         head.next = reverseKGroup(tail, k);
         return newHead;
     }

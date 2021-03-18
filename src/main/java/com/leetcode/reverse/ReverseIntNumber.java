@@ -1,6 +1,7 @@
-package com.leetcode;
+package com.leetcode.reverse;
 
 public class ReverseIntNumber {
+    // TODO: 2021/3/18
     public static void main(String[] args) {
         System.out.println(reverseLeftWords(12345));
     }

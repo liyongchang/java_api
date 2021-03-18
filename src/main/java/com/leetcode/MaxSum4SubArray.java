@@ -1,4 +1,4 @@
-package com.container.leetcode;
+package com.leetcode;
 //子数组最大累加和
 
 /**

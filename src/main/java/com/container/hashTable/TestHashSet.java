@@ -77,4 +77,16 @@ public class TestHashSet {
 
         return (key == null) ? 0 : (h = key.hashCode()) ^ (h >>> 16);
     }
+
+
+
+
+    public String reverseWords(String s) {
+        String[] ss=s.split(" ");
+        StringBuilder sout=new StringBuilder();
+        for(int i=ss.length;i==0;i--){
+            sout.append(ss[i]);
+        }
+        return sout.toString();
+    }
 }

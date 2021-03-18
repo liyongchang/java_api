@@ -28,7 +28,7 @@ public class QuickSort {
         if (left < right) {
             int leftPoint = left;
             int rightPoint = right;
-            int pivot = s[left];
+            int pivot = s[left];//!!!!!!!!!
             while (leftPoint < rightPoint) {
                 while (leftPoint < rightPoint && s[rightPoint] > pivot) {
                     rightPoint--;
@@ -45,7 +45,7 @@ public class QuickSort {
                 }
             }
             //快速排序为何这么快，因为一趟排序后元素都在他应该在的位置！
-            s[left] = s[leftPoint];
+            s[left] = s[leftPoint];//!!!!!!!!!
             s[leftPoint] = pivot;
             quick_sort(s, left, rightPoint - 1);
             quick_sort(s, rightPoint + 1, right);
