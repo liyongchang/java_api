@@ -6,6 +6,11 @@ import java.util.Map;
 
 /**
  * Created by nmw on 2020/3/31.
+ * 其中最经典的莫过于 LRU，它使用一个链表为缓存排序，每次对数据进行访问时，
+ * 将数据移动至队尾，队列已满时淘汰队首
+ *
+ * LRU 的实现成本极低，不足之处在于它对热点数据的判断不稳定
+ * —— 如果某热点数据在很长一段时间内都被频繁访问，仍有可能因为短时间内没有被访问而被快速淘汰。
  */
 public class LRUCache {
     private int capacity;
