@@ -10,6 +10,7 @@ import java.util.concurrent.TimeoutException;
 
 public class CompletableFutureDemo {
     public static void main(String[] args) {
+        //test
         CompletableFutureDemo completableFutureDemo = new CompletableFutureDemo();
         System.out.println(completableFutureDemo.getPrices());
     }
