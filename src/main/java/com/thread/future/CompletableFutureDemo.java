@@ -1,5 +1,7 @@
 package com.thread.future;
 
+import org.apache.commons.lang3.BooleanUtils;
+
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
@@ -11,6 +13,8 @@ import java.util.concurrent.TimeoutException;
 public class CompletableFutureDemo {
     public static void main(String[] args) {
         //test
+        System.out.println(BooleanUtils.isNotTrue(null));
+
         CompletableFutureDemo completableFutureDemo = new CompletableFutureDemo();
         System.out.println(completableFutureDemo.getPrices());
     }
@@ -33,6 +37,7 @@ public class CompletableFutureDemo {
         }
         return prices;
     }
+
 
 
     private class Task implements Runnable {

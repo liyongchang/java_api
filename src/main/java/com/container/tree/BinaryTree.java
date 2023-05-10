@@ -143,7 +143,6 @@ public class BinaryTree {
                 binaryTreeNodes.add(binaryTreeNode.getRightChild());
             }
         }
-
     }
 
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
