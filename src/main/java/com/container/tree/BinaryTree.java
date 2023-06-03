@@ -128,6 +128,7 @@ public class BinaryTree {
      * 1.用队列存储元素
      * 2.add 入队，pool 出队
      * 3.收敛条件队列有值
+     *
      * @param node
      */
     public void levelOrder(BinaryTreeNode node) {
@@ -202,4 +203,34 @@ public class BinaryTree {
             this.right = right;
         }
     }
+
+    public TreeNode buildTree(int[] preorder, int[] inorder) {
+        if (preorder == null || inorder == null || inorder.length == 0) {
+            return null;
+        }
+        return build(preorder, 0, preorder.length - 1, inorder, 0, inorder.length - 1);
+    }
+
+    private TreeNode build(int[] preorder, int preorderStart, int preorderEnd,
+                           int[] inorder, int inorderStart, int inorderEnd) {
+        if (preorderStart > preorderEnd || inorderStart > inorderEnd) {
+            return null;
+        }
+        int val = preorder[preorderStart];
+        TreeNode root = new TreeNode(val);
+        int index = 0;
+        for (int i = inorderStart; i <= inorderEnd; i++) {
+            if (inorder[i] == val) {
+                index = i;
+                break;
+            }
+        }
+        int leftSize = index - inorderStart;
+        root.left = build(preorder, preorderStart + 1, preorderStart + leftSize,
+                inorder, inorderStart, index - 1);
+        root.right = build(preorder, preorderStart + leftSize + 1, preorderEnd,
+                inorder, index + 1, inorderEnd);
+        return root;
+    }
+
 }
