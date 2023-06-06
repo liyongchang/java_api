@@ -1,5 +1,8 @@
 package com.container.list;
 
+import lombok.Data;
+
+@Data
 public class ListNode {
 
     int val;
